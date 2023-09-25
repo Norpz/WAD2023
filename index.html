@@ -1,38 +1,119 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="res/images/favicon.ico">
+    <link rel="stylesheet" href="res/css/style.css">
     <title>My Dashboard</title>
   </head>
   <body>
-	<header>
+    <h1 class="header">
     		<strong>Welcome to your dashboard!</strong>
-	</header>
+	  </h1>
+    
 	<section>
-    <div>
+    
+    <div class="logo">
+      <figure>
         <img src="res/images/me.png" width="128" height="128" alt="My picture">
+        <figcaption>
+          <div>
+            <ul>
+              <strong>Information</strong>
+                <li>Robert Valge</li>
+                <li> A date following this format dd/mm/yyyy</li>
+                <li> Computer Engineering </li>
+            </ul>
+        </div>
+        </figcaption>
+      </figure>
     </div>
-    <div>
-        <ul>
-            <li>Your name</li>
-            <li> A date following this format dd/mm/yyyy</li>
-            <li> Software Engineering </li>
-        </ul>
-    </div>
-    <div>
-        <strong>2.65</strong>
-    </div>
+    
+  <h1>Courses</h1>
+  <table>
+      <thead>
+      <tr>
+          <th>#</th>
+          <th>Course Title</th>
+          <th>Semester</th>
+          <th>Grade</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+          <td>1</td>
+          <td>
+            <a href="https://courses.cs.ut.ee/2023/ASD/fall" target="_blank">Agile software development</a>
+          </td>
+          <td>fall</td>
+          <td>82</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>
+            <a href="https://courses.cs.ut.ee/2023/systemsmodelling/fall" target="_blank">Systems modelling </a>
+          </td>
+          <td>fall</td>
+          <td>85</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td> 
+            <a href="https://courses.cs.ut.ee/2023/RE/fall" target="_blank">Requirements Engineering </a>
+          </td>
+          <td>fall</td>
+          <td>99</td>
+      </tr>
+      <tr>
+          <td>4</td>
+          <td> 
+            <a href="https://courses.cs.ut.ee/2023/HCI/fall" target="_blank">Human Computer Interaction</a>
+          </td>
+          <td>fall</td>
+          <td>65</td>
+      </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">Year 23/24</th>
+        </tr>
+      </tfoot>
+  </table>
 </section>
-	<footer>
-    		<ul>
-        		<li>
-            			<a href="https://ois2.ut.ee/">OIS</a>
-        		</li>
-        		<li>
-            			<a href="https://courses.cs.ut.ee/">Courses</a>
-        		</li>
-    		</ul>
-	</footer>	
+    <form>
+      <h2><strong>Registration: </strong></h2>
+      <table>
+        <tr><td>Course title: </td></tr>
+        <tr><td><input type="text"></td></tr>
+        <tr><td><label for="semester">Semester: </label></td></tr>
+        <tr><td>
+          <select id="semester" name="semester">
+            <option value="fall">Fall</option>
+            <option value="spring">Spring</option>
+          </select>
+        </td></tr>
+        <tr><td>Attendance:  </td></tr>
+        <tr><td>
+          <input type="radio" id="attendance">
+          <label for="attendance">Virtual attendance</label><br>
+          <input type="radio" id="attendance2">
+          <label for="attendance2">Physical attendace</label><br>
+        </td></tr>
+        <tr><td><button type="button" onclick="alert('Submitted!')">Submit</button></td></tr>
+      </table>
+    </form>
+    <br>
+    <footer class="nav">
+      <h4>LINKS</h4>
+      <ul>
+          <li>
+                <a href="https://ois2.ut.ee/" target="_blank">OIS</a>
+          </li>
+          <li>
+                <a href="https://courses.cs.ut.ee/" target="_blank">Courses</a>
+          </li>
+      </ul>
+</footer>	
   </body>
 </html>
